@@ -1,8 +1,11 @@
-import {Injectable} from '@angular/core';
+import {Injectable, InjectionToken} from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
-export abstract class BaseService {
-  abstract greet(): void
+// @Injectable({
+//   providedIn: 'root',
+// })
+export interface BaseService {
+  /* abstract */
+  greet(): void;
 }
+
+export const BASE_SERVICE_TOKEN = new InjectionToken<BaseService>('BaseService');

@@ -4,8 +4,8 @@ import {BaseService} from './base.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ChildBService extends BaseService {
-  override greet() {
+export class ChildBService implements BaseService {
+  greet() {
     console.log('===B Service!===');
   }
 }

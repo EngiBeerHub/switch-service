@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {BaseService} from './base.service';
+import {BASE_SERVICE_TOKEN, BaseService} from './base.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import {BaseService} from './base.service';
 })
 export class AppComponent implements OnInit {
   title = 'switch-service';
-  private readonly baseService = inject(BaseService);
+  private readonly baseService = inject(BASE_SERVICE_TOKEN);
 
   ngOnInit() {
     this.baseService.greet();
