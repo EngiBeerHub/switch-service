@@ -5,10 +5,10 @@ import {Router} from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class ChildAService implements BaseService {
+export class ChildAService extends BaseService {
   private readonly router = inject(Router);
 
-  greet() {
+  override greet() {
     console.log(this.router.url);
     console.log('===A Service!===');
   }
